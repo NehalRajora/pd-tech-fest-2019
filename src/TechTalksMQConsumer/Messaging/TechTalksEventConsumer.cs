@@ -11,7 +11,7 @@ namespace TechTalksProcessor.Messaging
 {
     public class TechTalksEventConsumer : ITechTalksEventConsumer
     {
-        // private const string exchangeName = "TechTalksExchange";
+        // private const string exchangeName = "TechTalksExchange";;
         private const string queueName = "hello";
         private const string routingKey = "hello";
 
@@ -69,7 +69,7 @@ namespace TechTalksProcessor.Messaging
                         var techTalk = JsonConvert.DeserializeObject<TechTalk>(message);
                         Console.WriteLine($"Received message {message}");
 
-                        // Sleep for 250 milliseconds (1/4 of a second) to simulate processing
+                        // Sleep for   250 milliseconds (1/4 of a second) to simulate processing
                         Thread.Sleep(TimeSpan.FromMilliseconds(250));
 
                         LogTechTalkDetails(techTalk);
